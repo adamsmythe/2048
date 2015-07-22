@@ -15,6 +15,8 @@
 {
   [BuddyBuildSDK setup];
   
+  [BuddyBuildSDK setup];
+  
   return YES;
 }
 
