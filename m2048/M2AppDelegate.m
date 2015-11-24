@@ -14,7 +14,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   [BuddyBuildSDK setup];
-  
+
+  [BuddyBuildSDK setUserIdentifierCallback:^NSString *{
+      return @"chris@example.com";
+  }];
+
   return YES;
 }
 

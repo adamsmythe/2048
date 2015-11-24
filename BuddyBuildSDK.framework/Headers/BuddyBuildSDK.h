@@ -3,7 +3,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIApplication.h>
 
+typedef NSString*(^BBUserIdentifierCallback)();
+
 @interface BuddyBuildSDK : NSObject
 + (void)setup:(id<UIApplicationDelegate>)bbAppDelegate;
 + (void)setup;
+
++ (void)setUserIdentifierCallback:(BBUserIdentifierCallback)callback;
+
 @end
