@@ -15,13 +15,11 @@
 {
   [BuddyBuildSDK setup];
 
-  [BuddyBuildSDK setUserIdentifierCallback:^NSString *{
-      return @"45354354343541";
+  [BuddyBuildSDK setUserDisplayNameCallback:^NSString *{
+      return @"Christopher Stott";
   }];
 
-    [BuddyBuildSDK setUsernameCallback:^NSString *{
-        return @"chris@example.com";
-    }];
+    NSLog(@"Environment variable SECURE_KEY = %@", [BuddyBuildSDK valueForEnvironmentKey:@"SECURE_KEY"]);
     
 
 
