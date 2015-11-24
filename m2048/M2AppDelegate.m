@@ -16,8 +16,14 @@
   [BuddyBuildSDK setup];
 
   [BuddyBuildSDK setUserIdentifierCallback:^NSString *{
-      return @"chris@example.com";
+      return @"45354354343541";
   }];
+
+    [BuddyBuildSDK setUsernameCallback:^NSString *{
+        return @"chris@example.com";
+    }];
+    
+
 
   return YES;
 }
