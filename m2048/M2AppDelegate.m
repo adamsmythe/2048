@@ -19,7 +19,7 @@
       return @"Christopher Stott";
   }];
 
-    NSLog(@"Environment variable SECURE_KEY = %@", [BuddyBuildSDK valueForEnvironmentKey:@"SECURE_KEY"]);
+    NSLog(@"Environment variable SECURE_KEY = %@", [BuddyBuildSDK valueForDeviceKey:@"SECURE_KEY"]);
     
 
 
