@@ -34,9 +34,11 @@
 		9AC180509E130F4823298D47 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B0C474C980C18CEBE18D25 /* AssetsLibrary.framework */; };
 		9C856370E6E666261EF867F9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F521F93C4142EEE7BDDFD745 /* SystemConfiguration.framework */; };
 		ADD797ED54B626E50A00684E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F4646D532224A273B48C9D /* CoreTelephony.framework */; };
+		D2BB8366AA63B01AEC0365DD /* libPods-m2048.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71846B7AF98E8E59EEF529A4 /* libPods-m2048.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15E1915388B885320B5CBBCA /* Pods-m2048.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-m2048.release.xcconfig"; path = "Pods/Target Support Files/Pods-m2048/Pods-m2048.release.xcconfig"; sourceTree = "<group>"; };
 		2443DC5218D662CA00C920C1 /* m2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = m2048.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2443DC5518D662CA00C920C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2443DC5718D662CA00C920C1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -84,8 +86,10 @@
 		374F52F33EE427E6164DFABE /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		42363629EBA69A02B0D181B2 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		68F4646D532224A273B48C9D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		71846B7AF98E8E59EEF529A4 /* libPods-m2048.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-m2048.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B0C474C980C18CEBE18D25 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		F521F93C4142EEE7BDDFD745 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F9C7C4C99B0857AB3D288014 /* Pods-m2048.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-m2048.debug.xcconfig"; path = "Pods/Target Support Files/Pods-m2048/Pods-m2048.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 				5D9771F87747C9AC6284A625 /* CoreText.framework in Frameworks */,
 				ADD797ED54B626E50A00684E /* CoreTelephony.framework in Frameworks */,
 				9C856370E6E666261EF867F9 /* SystemConfiguration.framework in Frameworks */,
+				D2BB8366AA63B01AEC0365DD /* libPods-m2048.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +120,7 @@
 				2443DC8118D662CA00C920C1 /* m2048Tests */,
 				2443DC5418D662CA00C920C1 /* Frameworks */,
 				2443DC5318D662CA00C920C1 /* Products */,
+				75B96BECB9D6600A2D5C85AD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +145,7 @@
 				42363629EBA69A02B0D181B2 /* CoreText.framework */,
 				68F4646D532224A273B48C9D /* CoreTelephony.framework */,
 				F521F93C4142EEE7BDDFD745 /* SystemConfiguration.framework */,
+				71846B7AF98E8E59EEF529A4 /* libPods-m2048.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -259,6 +266,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		75B96BECB9D6600A2D5C85AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9C7C4C99B0857AB3D288014 /* Pods-m2048.debug.xcconfig */,
+				15E1915388B885320B5CBBCA /* Pods-m2048.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -266,9 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2443DC8B18D662CA00C920C1 /* Build configuration list for PBXNativeTarget "m2048" */;
 			buildPhases = (
+				869F18389F6275CC3EC53393 /* Check Pods Manifest.lock */,
 				2443DC4E18D662CA00C920C1 /* Sources */,
 				2443DC4F18D662CA00C920C1 /* Frameworks */,
 				2443DC5018D662CA00C920C1 /* Resources */,
+				F7DDC2C0019D01FA35EB5C4B /* Embed Pods Frameworks */,
+				6EFB4B7EC658F603DBD6374A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -324,6 +343,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6EFB4B7EC658F603DBD6374A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-m2048/Pods-m2048-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		869F18389F6275CC3EC53393 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7DDC2C0019D01FA35EB5C4B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-m2048/Pods-m2048-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2443DC4E18D662CA00C920C1 /* Sources */ = {
@@ -450,6 +517,7 @@
 		};
 		2443DC8C18D662CA00C920C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9C7C4C99B0857AB3D288014 /* Pods-m2048.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -472,6 +540,7 @@
 		};
 		2443DC8D18D662CA00C920C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15E1915388B885320B5CBBCA /* Pods-m2048.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
